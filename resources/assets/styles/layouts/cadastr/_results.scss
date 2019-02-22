@@ -1,0 +1,248 @@
+.results {
+  overflow: hidden;
+  margin-bottom: 69px;
+
+  &__columns {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -20px;
+  }
+
+  &__column {
+    padding: 0 20px;
+
+    &--1 {
+      flex: 1;
+    }
+
+    &--2 {
+      max-width: 215px;
+      flex: 0 0 215px;
+    }
+  }
+
+  &__image {
+    padding-top: 25px;
+    margin-bottom: 13px;
+  }
+
+  &__download {
+    text-align: center;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    font-size: 0.9231rem;
+    color: #324158;
+    border-bottom: 1px dotted #324158;
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $colorPrimary;
+      border-color: $colorPrimary;
+      text-decoration: none;
+    }
+  }
+}
+
+.diagrams {
+  margin-bottom: 20px;
+
+  &__title {
+    font-size: 2.154rem;
+    border-bottom: 1px solid #ad0000;
+    margin-bottom: 21px;
+    padding: 0 0 13px;
+    text-align: left;
+  }
+
+  &__columns {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -15px;
+  }
+
+  &__column {
+    max-width: 50%;
+    flex: 0 0 50%;
+    padding: 0 15px;
+  }
+}
+
+.diagram {
+  $this: &;
+
+  margin-bottom: 14px;
+
+  &__title {
+    line-height: 1.2;
+    font-size: 1.077rem;
+  }
+
+  &__inner {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__image {
+    max-width: 68%;
+    flex: 0 0 68%;
+    display: block;
+    position: relative;
+  }
+
+  &__lbl {
+    flex: 1;
+    font-size: 1.154rem;
+    text-align: right;
+  }
+
+  &__track {
+    height: 5px;
+    background: #f7f7f7;
+    width: 100%;
+    display: block;
+  }
+
+  &__val {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  &--1 {
+    #{$this}__val {
+      background: #191919;
+    }
+  }
+
+  &--2 {
+    #{$this}__val {
+      background: #c3c3c3;
+    }
+  }
+
+  &--3 {
+    color: $colorPrimary;
+
+    #{$this}__val {
+      background: #b01c1c;
+    }
+  }
+}
+
+.diagrams-results {
+  text-align: right;
+  line-height: 0.9;
+  color: #000;
+
+  &__lbl {
+    vertical-align: top;
+    margin-right: 15px;
+  }
+
+  &__val {
+    font-size: 2.769rem;
+    font-weight: 700;
+    margin-right: 15px;
+    color: $colorPrimary;
+  }
+
+  &__descr {
+    vertical-align: bottom;
+  }
+}
+
+@media (max-width: 1200px) {
+  .results {
+    &__columns {
+      margin: 0 -10px;
+    }
+
+    &__column {
+      padding: 0 10px;
+    }
+  }
+
+  .diagram {
+    &__image {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+
+    &__lbl {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .diagrams {
+    &__column {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+
+  .diagrams-results {
+    &__lbl {
+      display: block;
+      margin: 0 0 10px;
+    }
+
+    &__val {
+      font-size: 1.6rem;
+      display: block;
+      margin: 0 0 10px;
+    }
+
+    &__descr {
+      display: block;
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .results {
+    &__column {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+
+    &__image {
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .diagrams {
+    &__title {
+      text-align: center;
+    }
+  }
+
+  .diagrams-results {
+    text-align: center;
+
+    &__lbl {
+      font-size: 1.2rem;
+    }
+
+    &__val {
+      font-size: 2rem;
+    }
+
+    &__descr {
+      font-size: 1.2rem;
+    }
+  }
+}

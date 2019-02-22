@@ -1,0 +1,44 @@
+.breadcrumbs {
+  $this: &;
+
+  font-size: 0.8462rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  &__item {
+    margin-right: 8px;
+    line-height: 14px;
+
+    &:first-child {
+      display: block;
+      background: url("../images/ico-home.png") 0 0 no-repeat;
+      width: 14px;
+      height: 14px;
+      text-indent: -999px;
+      overflow: hidden;
+    }
+
+    a {
+      display: block;
+    }
+  }
+
+  &__delimiter {
+    margin-right: 8px;
+    margin-bottom: 1px;
+  }
+
+  &__current {
+    margin-top: 1px;
+  }
+
+  &--home {
+    #{$this}__item:first-child {
+      width: auto;
+      padding-left: 20px;
+      text-indent: initial;
+      overflow: auto;
+    }
+  }
+}

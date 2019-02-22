@@ -1,0 +1,155 @@
+.resources {
+  margin-bottom: 50px;
+
+  &__columns {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -24px;
+  }
+
+  &__column {
+    max-width: 50%;
+    flex: 0 0 50%;
+    padding: 0 24px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -1px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      border-right: 1px dotted $colorMeta;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+}
+
+.documents {
+  &__heading {
+    margin-bottom: 13px;
+  }
+
+  &__title {
+    border-bottom: 1px solid $colorBorder;
+    padding-bottom: 7px;
+    font-size: 1.417rem;
+    margin-bottom: 9px;
+  }
+
+  &__subtitle {
+    font-size: 1.077rem;
+    line-height: 1.4;
+  }
+
+  &__items {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -11px;
+  }
+
+  &__item {
+    max-width: 25%;
+    flex: 0 0 25%;
+    padding: 0 11px;
+  }
+}
+
+.document-prev {
+  font-size: 0.9231rem;
+  margin-bottom: 8px;
+
+  &__thumb {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 3px;
+    width: 120px;
+
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+      height: auto;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    padding-bottom: 8px;
+    position: relative;
+    margin-bottom: 4px;
+    color: $colorHeading;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 80px;
+      height: 1px;
+      background: $colorBorder;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 10px;
+    line-height: 1.4;
+
+    .lbl {
+      display: block;
+    }
+  }
+
+  &__ext {
+    font-size: 0.8462rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .resources {
+    &__columns {
+      margin: 0 -10px;
+    }
+
+    &__column {
+      max-width: 100%;
+      flex: 0 0 100%;
+      padding: 0 10px;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .documents {
+    &__item {
+      max-width: 150px;
+      flex: 0 0 150px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .documents {
+    text-align: center;
+
+    &__items {
+      justify-content: center;
+    }
+  }
+
+  .document {
+    &__title {
+      &::after {
+        left: 50%;
+        margin-left: -40px;
+      }
+    }
+  }
+}

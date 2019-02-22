@@ -1,0 +1,63 @@
+/**
+ * WordPress Generated Classes
+ * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+ */
+
+/** Media alignment */
+.alignnone {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.aligncenter {
+  display: block;
+  margin: ($spacer / 2) auto;
+  height: auto;
+}
+
+.alignleft,
+.alignright {
+  margin-bottom: ($spacer / 2);
+  height: auto;
+}
+
+.wp-block-button {
+  &__link {
+    display: inline-block;
+    padding: 7px 22px 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8333rem;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+    box-sizing: border-box;
+    color: #fff;
+    background: $colorAccent;
+    border-color: $colorAccent;
+    border-radius: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+      color: #fff;
+      background: #7b736f;
+      border-color: #7b736f;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .alignleft {
+    float: left;
+    margin-right: ($spacer / 2);
+  }
+
+  .alignright {
+    float: right;
+    margin-left: ($spacer / 2);
+  }
+}

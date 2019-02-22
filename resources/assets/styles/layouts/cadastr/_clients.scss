@@ -1,0 +1,183 @@
+.clients {
+  margin-bottom: 120px;
+
+  &__title {
+    padding: 0 0 10px;
+    margin: 0 0 19px;
+    font-size: 2rem;
+    border-bottom: 1px solid $colorPrimary;
+  }
+
+  &__image {
+    padding: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
+
+  &__columns {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -20px;
+  }
+
+  &__column {
+    padding: 0 20px;
+
+    &--1 {
+      max-width: 40%;
+      flex: 0 0 40%;
+    }
+
+    &--2 {
+      max-width: 60%;
+      flex: 0 0 60%;
+    }
+  }
+}
+
+.clients-info {
+  padding-right: 30px;
+
+  &__heading {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -5px;
+    border-bottom: 1px dotted $colorMeta;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+  }
+
+  &__ico {
+    padding-right: 10px;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__title {
+    padding: 0;
+  }
+
+  &__description {
+    line-height: 1.4;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px dotted $colorMeta;
+  }
+
+  &__columns {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+  }
+
+  &__column {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+
+  &__numbers {
+    color: #000;
+
+    p {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__results {
+    text-align: center;
+    color: #000;
+  }
+
+  &__results-lbl {
+    font-size: 1.154rem;
+  }
+
+  &__results-val {
+    font-size: 2.923rem;
+    font-weight: 700;
+
+    .ico {
+      font-size: 1.154rem;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .clients {
+    &__columns {
+      margin: 0 -10px;
+    }
+
+    &__column {
+      padding: 0 10px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .clients-info {
+    &__columns {
+      margin: 0;
+    }
+
+    &__column {
+      max-width: 100%;
+      flex: 0 0 100%;
+      padding: 0;
+    }
+
+    &__numbers {
+      margin-bottom: 15px;
+    }
+
+    &__results {
+      text-align: left;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .clients {
+    text-align: center;
+
+    &__column {
+      max-width: 100%;
+      flex: 0 0 100%;
+
+      &--1 {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__image {
+      margin: 0 auto;
+    }
+  }
+
+  .clients-info {
+    padding: 0;
+
+    &__title {
+      max-width: 100%;
+      flex: 0 0 100%;
+      margin-bottom: 5px;
+    }
+
+    &__ico {
+      max-width: 100%;
+      flex: 0 0 100%;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    &__results {
+      text-align: center;
+    }
+  }
+}

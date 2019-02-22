@@ -1,0 +1,75 @@
+@import "common/variables";
+
+/* Libraries */
+@import "libs/normalize";
+@import "libs/bourbon/bourbon";
+
+// Import Fancybox
+@import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
+
+// Import Swiper
+@import "~swiper/dist/css/swiper.min.css";
+
+/** Import everything from autoload */
+@import "./autoload/**/*";
+
+/** Import fonts */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic");
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
+
+/** Import theme styles */
+@import "common/base";
+@import "common/global";
+
+/** Import theme styles */
+@import "components/breadcrumbs";
+@import "components/buttons";
+@import "components/modals";
+@import "components/modifies";
+@import "components/forms";
+@import "components/page-content";
+@import "components/inputfile";
+@import "components/comments";
+@import "components/wp-classes";
+
+/** Import theme styles */
+@import "layouts/header";
+@import "layouts/service-layout";
+@import "layouts/service-content";
+@import "layouts/service-info";
+@import "layouts/primary-menu";
+@import "layouts/promo";
+@import "layouts/widgets";
+@import "layouts/consultant";
+@import "layouts/projects-list";
+@import "layouts/last-news";
+@import "layouts/pay-description";
+@import "layouts/resources";
+@import "layouts/manager";
+@import "layouts/footer";
+
+/** Import layouts */
+@import "layouts/sidebar";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";
+
+/** Import Cadastr */
+@import "layouts/cadastr/portfolio-list";
+@import "layouts/cadastr/manager-inline";
+@import "layouts/cadastr/stages-list";
+@import "layouts/cadastr/results";
+@import "layouts/cadastr/clients";
+@import "layouts/cadastr/statistics";
+@import "layouts/cadastr/price";
+@import "layouts/cadastr/solutions";
+

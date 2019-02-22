@@ -1,0 +1,166 @@
+.statistics {
+  margin-bottom: 68px;
+
+  &__title {
+    border-bottom: 1px solid $colorBorder;
+    padding-bottom: 10px;
+    font-size: 2.462rem;
+    margin-bottom: 26px;
+  }
+
+  &__items {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -35px;
+  }
+
+  &__item {
+    max-width: 25%;
+    flex: 0 0 25%;
+    padding: 0 35px;
+
+    &--1 {
+      max-width: 28%;
+      flex: 0 0 28%;
+    }
+
+    &--3 {
+      max-width: 22%;
+      flex: 0 0 22%;
+    }
+  }
+}
+
+.statistics-info {
+  max-width: 73%;
+  margin: 0 auto 76px;
+  color: #000;
+
+  &__title {
+    font-size: 1.385rem;
+    margin-bottom: 21px;
+  }
+
+  &__columns {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -35px;
+  }
+
+  &__column {
+    max-width: 50%;
+    flex: 0 0 50%;
+    padding: 0 35px;
+
+    &--1 {
+      max-width: 54%;
+      flex: 0 0 54%;
+    }
+
+    &--2 {
+      max-width: 46%;
+      flex: 0 0 46%;
+    }
+  }
+
+  &__lbl {
+    font-size: 1.077rem;
+  }
+
+  &__price {
+    line-height: 1;
+  }
+
+  &__price-val {
+    font-size: 4.231rem;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+}
+
+.statistics-item {
+  &__title {
+    font-size: 1.231rem;
+    font-weight: 700;
+    color: $colorAccent;
+    border-bottom: 1px dotted $colorMeta;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+  }
+
+  &__content {
+    color: #000;
+    font-size: 1.077rem;
+
+    p {
+      margin-bottom: 1px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .statistics {
+    &__items {
+      margin: 0 -10px;
+    }
+
+    &__item {
+      max-width: 50%;
+      flex: 0 0 50%;
+      margin-bottom: 30px;
+      padding: 0 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .statistics-info {
+    &__column {
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+  }
+
+  .statistics-item {
+    &__title {
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .statistics-info {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .statistics {
+    text-align: center;
+  }
+
+  .statistics-info {
+    &__columns {
+      margin: 0 -10px;
+    }
+
+    &__column {
+      max-width: 100%;
+      flex: 0 0 100%;
+      padding: 0 10px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .statistics {
+    &__item {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+}

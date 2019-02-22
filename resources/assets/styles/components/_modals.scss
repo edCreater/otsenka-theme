@@ -1,0 +1,101 @@
+.modals {
+  display: none;
+}
+
+.modal-request {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 5px;
+  padding: 12px 24px;
+
+  &__title {
+    font-size: 1.385rem;
+    border-bottom: 1px solid $colorBorder;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+
+  &__columns {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 8px;
+  }
+
+  &__column {
+    &--1 {
+      max-width: 165px;
+      flex: 0 0 165px;
+    }
+
+    &--2 {
+      flex: 1;
+    }
+  }
+
+  &__name {
+    font-size: 1.154rem;
+    font-weight: bold;
+    color: $colorHeading;
+    border-bottom: 1px dotted $colorMeta;
+    margin-bottom: 2px;
+    padding-bottom: 2px;
+  }
+
+  &__position {
+    color: $colorMeta;
+    margin-bottom: 5px;
+    font-size: 1.077rem;
+  }
+
+  &__quote {
+    font-style: italic;
+    color: #000;
+    margin-bottom: 8px;
+  }
+
+  &__policy-link {
+    color: $colorMeta;
+  }
+}
+
+.modal-request-info {
+  &__image {
+    background: #fff;
+    padding: 2px;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+    margin-bottom: 8px;
+  }
+
+  &__phone {
+    font-size: 1.308rem;
+    font-weight: bold;
+    color: $colorHeading;
+    margin-bottom: 4px;
+  }
+}
+
+.modal-request-form {
+  &__textarea {
+    min-height: 85px;
+  }
+}
+
+@media (max-width: 520px) {
+  .modal-request {
+    &__column {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+
+  .modal-request-info {
+    text-align: right;
+
+    &__image {
+      max-width: 50px;
+      float: left;
+    }
+  }
+}

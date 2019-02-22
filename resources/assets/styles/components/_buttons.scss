@@ -1,0 +1,48 @@
+.btn {
+  display: inline-block;
+  padding: 7px 22px 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8333rem;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  border-radius: 3px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+
+  &--primary {
+    color: #fff;
+    background: $colorPrimary;
+    background-image: linear-gradient(to bottom, lighten($colorPrimary, 2%) 50%, darken($colorPrimary, 2%) 50%);
+    border-color: transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+      background: $colorPrimary;
+      border-color: transparent;
+    }
+  }
+
+  &--transparent {
+    color: $colorText;
+    background: transparent;
+    border-color: #7b736f;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+      background: #7b736f;
+      border-color: #7b736f;
+    }
+  }
+}

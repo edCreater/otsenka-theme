@@ -1,0 +1,140 @@
+.price {
+  background: #fcfcfc;
+  padding: 16px 16px 26px;
+  margin-bottom: 58px;
+
+  &__heading {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    border-bottom: 1px solid $colorBorder;
+    padding-bottom: 4px;
+    font-size: 2.462rem;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-size: 1.077rem;
+  }
+
+  &__items {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    margin: 0 -20px;
+  }
+
+  &__item {
+    max-width: 33.333333%;
+    flex: 0 0 33.333333%;
+    padding: 0 29px;
+  }
+}
+
+.price-item {
+  background: #fff;
+  padding: 8px 33px 25px;
+  border-top: 3px solid $colorPrimary;
+  box-shadow: 0 0 14px 1px rgba(0, 0, 0, 0.2);
+  color: #000;
+
+  &__title {
+    text-align: center;
+    border-bottom: 1px dotted $colorMeta;
+    padding: 10px 0 15px;
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    line-height: 1.5;
+    padding: 0 0 0 20px;
+    margin: 10px 0 5px;
+  }
+
+  &__price {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+
+    .lbl {
+      font-size: 1.154rem;
+      font-weight: 400;
+    }
+  }
+
+  &__buy {
+    text-align: center;
+
+    .btn {
+      min-width: 160px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .price {
+    &__items {
+      margin: 0 -10px;
+    }
+
+    &__item {
+      padding: 0 10px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .price-item {
+    padding: 8px 15px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .price {
+    text-align: center;
+
+    &__items {
+      align-items: flex-start;
+    }
+
+    &__item {
+      max-width: 100%;
+      flex: 0 0 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  .price-item {
+    &__list {
+      padding: 0;
+      list-style: none;
+
+      li {
+        padding-bottom: 5px;
+        margin-bottom: 3px;
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 40px;
+          height: 1px;
+          border-bottom: 1px dotted $colorPrimary;
+          border-radius: 50%;
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          margin-left: -20px;
+        }
+
+        &:last-child {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

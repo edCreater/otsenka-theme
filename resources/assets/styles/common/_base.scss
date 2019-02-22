@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $baseFontSize;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  font-family: $primaryFont;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: $colorText;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  max-height: 1000000px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 6px 0;
+  margin: 0;
+  max-height: 1000000px;
+  line-height: 1.1;
+  color: $colorHeading;
+}
+
+h1 {
+  font-size: 1.917rem;
+}
+
+h2 {
+  font-size: 1.333rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+a {
+  color: $colorPrimary;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($colorPrimary, 10%);
+    text-decoration: underline;
+  }
+}
+
+li,
+ol,
+ul {
+  max-height: 1000000px;
+}
+
+div {
+  max-height: 1000000px;
+}
+
+.form-input {
+  outline: none;
+  transition: all 0.4s;
+  color: $colorText;
+  font-family: $primaryFont;
+
+  @include placeholder {
+    font-weight: 400;
+    opacity: 1;
+    color: #a7a3a3;
+    transition: opacity 0.5s;
+    font-family: $primaryFont;
+  }
+
+  &:focus {
+    @include placeholder {
+      opacity: 0;
+    }
+  }
+}
+
+.form-textarea {
+  resize: none;
+  height: 65px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}

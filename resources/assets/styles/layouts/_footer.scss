@@ -1,0 +1,183 @@
+.footer {
+  background: #fbfbfb;
+  padding: 10px 0;
+  border-top: 2px solid $colorAccent;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__columns {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -10px;
+  }
+
+  &__column {
+    max-width: 19.5%;
+    flex: 0 0 19.5%;
+    padding: 0 10px;
+
+    &--1 {
+      max-width: 22%;
+      flex: 0 0 22%;
+    }
+
+    &--2 {
+      max-width: 19%;
+      flex: 0 0 19%;
+    }
+
+    &--3 {
+      max-width: 19%;
+      flex: 0 0 19%;
+    }
+
+    &--4 {
+      max-width: 19%;
+      flex: 0 0 19%;
+    }
+
+    &--5 {
+      max-width: 21%;
+      flex: 0 0 21%;
+    }
+  }
+
+  &__top {
+    border-bottom: 1px dotted $colorMeta;
+    padding: 10px 0 16px;
+  }
+
+  &__middle {
+    padding: 20px 0;
+  }
+
+  &__bottom {
+    font-size: 0.8333rem;
+  }
+
+  &__descr {
+    margin-bottom: 10px;
+    color: $colorMeta;
+  }
+
+  &__copy {
+    text-align: right;
+    color: $colorMeta;
+  }
+}
+
+.footer-callback {
+  &__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.083rem;
+    font-family: $fontFamilyCondenced;
+    line-height: 1.2;
+    color: $colorHeading;
+  }
+
+  &__subtitle {
+    color: $colorMeta;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  &__btn {
+    min-width: 176px;
+    border-radius: 3px;
+  }
+}
+
+.footer-contacts {
+  text-align: right;
+
+  &__item {
+    line-height: 1.2;
+  }
+
+  &__phone {
+    font-size: 1.846rem;
+    font-weight: 700;
+    color: $colorHeading;
+  }
+
+  &__address {
+    font-size: 0.9231rem;
+  }
+}
+
+.footer-navs {
+  &__heading {
+    text-align: right;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.083rem;
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    color: $colorMeta;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+}
+
+.footer-nav {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: block;
+  color: #000;
+
+  li {
+    line-height: 1.4;
+    font-size: 0.9231rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    &__container {
+      padding: 0 10px;
+    }
+
+    &__column {
+      max-width: 25%;
+      flex: 0 0 25%;
+
+      &--1 {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    text-align: center;
+
+    &__container {
+      padding: 0 10px;
+    }
+
+    &__column {
+      max-width: 100%;
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+    }
+
+    &__copy {
+      text-align: center;
+    }
+  }
+
+  .footer-contacts {
+    text-align: center;
+  }
+}
