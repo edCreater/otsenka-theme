@@ -22,11 +22,13 @@
       <div class="promo-content__price">
         <p class="promo-content__price-lbl">{!! $price_lbl !!}</p>
         <p class="promo-content__price-val">{!! $price_val !!}</p>
-        <a href="images/solutions/solution-3.pdf" class="promo-content__price-thumb" target="_blank">
+        @php if ( $document_link ) : @endphp
+        <a href="{{ $document_link }}" class="promo-content__price-thumb" target="_blank">
           <img src="{!! \App\asset_path('images/ico-pdf.png') !!}" class="promo-content__price-ico" />
         </a>
+        @php endif; @endphp
       </div>
-      @php if ( $buy ) : @endphp
+      @php if ( $btn ) : @endphp
       <div class="promo__buy">
         <a class="promo__buy-btn btn btn--primary" href="javascript:;" data-fancybox data-src="#modal-request">Заказать отчет</a>
       </div>

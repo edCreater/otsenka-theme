@@ -16,7 +16,7 @@ class PageTmplService extends Controller {
 		$promo_fields = get_field( 'cs_promo_fields' );
 
 		$promo = \App\template( 'partials.service.promo', [
-				'description'      => ( !empty( $promo_fields['cs_promo_description'] ) ) ? $promo_fields['cs_promo_description'] : 'Введите описание',
+				'description'      => ( ! empty( $promo_fields['cs_promo_description'] ) ) ? $promo_fields['cs_promo_description'] : 'Введите описание',
 				'thumb'            => wp_get_attachment_image_url( $promo_fields['cs_promo_image']['id'], 'big-thumb' ),
 				'thumb_mobile'     => wp_get_attachment_image_url( $promo_fields['cs_promo_image_mobile']['id'], 'full' ),
 				'title'            => $promo_fields['cs_promo_title'],
@@ -26,6 +26,8 @@ class PageTmplService extends Controller {
 				'content'          => $promo_fields['cs_promo_content'],
 				'price_lbl'        => $promo_fields['cs_promo_pricelbl'],
 				'price_val'        => $promo_fields['cs_promo_priceval'],
+				'document_link'    => $promo_fields['cs_promo_document']['url'],
+				'btn'              => $promo_fields['cs_promo_button'],
 			]
 		);
 

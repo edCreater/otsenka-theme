@@ -3,6 +3,15 @@
 namespace App;
 
 /**
+ * Add additional MIME types
+ */
+add_filter('body_class', function () {
+	$mime_types['pdf'] = 'application/pdf'; //Adding svg extension
+
+	return $mime_types;
+});
+
+/**
  * Add <body> classes
  */
 add_filter('body_class', function (array $classes) {
